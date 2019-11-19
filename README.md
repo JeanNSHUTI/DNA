@@ -1,17 +1,15 @@
-# DNA: Dashboard for an Automated Industrial Food Distributor[Start Bootstrap - SB Admin](https://startbootstrap.com/template-overviews/sb-admin/)
+# DNA: Dashboard for an Automated Industrial Food Distributor
 
 Web application for an automated industrial food distributor (Distributeur de Nourriture Automatique) for middle to large scale farmers. 
 
 ## Source Code
 
-The template for this wonderful bootstrap dashboard was provided by **[startbootstrap](https://startbootstrap.com/templates/sb-admin/)**
-The original source code can be found on Github at **[the Author - David Miler](https://github.com/BlackrockDigital/startbootstrap-sb-admin.git)**
-All modifications concerning database linkage and php code has been integrated by **[Nshuti Jean-René](https://github.com/JeanNSHUTI)**
+- The template for this wonderful bootstrap dashboard was provided by **[startbootstrap](https://startbootstrap.com/templates/sb-admin/)**
+- The original source code can be found on Github at **[the Author - David Miler](https://github.com/BlackrockDigital/startbootstrap-sb-admin.git)**
+- All modifications concerning database linkage and php code has been integrated by **[Nshuti Jean-René](https://github.com/JeanNSHUTI)**
 
 ## Live preview
 **[View Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin/)**
-
-
 
 ## Usage
 #### Gulp Tasks

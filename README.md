@@ -9,7 +9,7 @@ Web application for an automated industrial food distributor (Distributeur de No
 - All modifications concerning database linkage and php code has been integrated by **[Nshuti Jean-René](https://github.com/JeanNSHUTI)**
 
 ## Live preview
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin/)**
+**[View Live Preview of template](https://blackrockdigital.github.io/startbootstrap-sb-admin/)**
 
 ## Usage
 #### Gulp Tasks

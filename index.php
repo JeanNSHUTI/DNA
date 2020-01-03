@@ -55,16 +55,16 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+        <form method="POST">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <input type="email" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
               <label for="inputEmail">E-mail Address</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" name = "password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <input type="password" name = "password" id="inputPassword" class="form-control" placeholder="Password" required="required">
               <label for="inputPassword">Password</label>
             </div>
           </div>

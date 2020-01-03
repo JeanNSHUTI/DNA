@@ -21,7 +21,7 @@
          session_register("myemail");
          $_SESSION['User_email'] = $myemail;
          
-         header("location: dashboard.html");
+         header("location: dashboard.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }

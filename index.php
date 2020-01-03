@@ -55,7 +55,7 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form method="POST">
+        <form action = "<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
           <div class="form-group">
             <div class="form-label-group">
               <input type="email" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">

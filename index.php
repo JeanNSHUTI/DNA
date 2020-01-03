@@ -58,13 +58,13 @@
         <form>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <input type="text" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
               <label for="inputEmail">E-mail Address</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" name = "password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <input type="text" name = "password" id="inputPassword" class="form-control" placeholder="Password" required="required">
               <label for="inputPassword">Password</label>
             </div>
           </div>

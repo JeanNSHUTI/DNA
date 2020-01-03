@@ -11,7 +11,7 @@
    $login_session = $row['email'];
    
    if(!isset($_SESSION['User_email'])){
-      header("location:login.php");
+      header("location:index.php");
       die();
    }
 ?>

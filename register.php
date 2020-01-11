@@ -15,6 +15,10 @@
        $new_confirmpassword = mysqli_real_escape_string($db,$_POST['confirmPassword']);
    }
 
+   echo $new_firstname;
+   echo $new_lastname;
+   echo $new_email;
+   echo $new_username;
    /*$sql = "INSERT INTO users (username, firstname, surname, passcode, email) VALUES ('$new_username', '$new_firstname', '$new_lastname', '$new_password', '$new_email')";
 
     if ($conn->query($sql) === TRUE) {

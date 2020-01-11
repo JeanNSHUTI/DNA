@@ -15,7 +15,7 @@
        $new_confirmpassword = mysqli_real_escape_string($db,$_POST['confirmPassword']);
    }
 
-   $sql = "INSERT INTO users (username, firstname, surname, passcode, email) VALUES ('$new_username', '$new_firstname', '$new_lastname', '$new_password', '$new_email')";
+   /*$sql = "INSERT INTO users (username, firstname, surname, passcode, email) VALUES ('$new_username', '$new_firstname', '$new_lastname', '$new_password', '$new_email')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
@@ -24,5 +24,5 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-   $conn->close();
+   $conn->close();*/
 ?>

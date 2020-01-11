@@ -78,7 +78,7 @@
             </div>
           </div>
           <!--<a class="btn btn-primary btn-block" href="dashboard.html">Login</a>-->
-            <input type = "submit" class="btn btn-primary btn-block" value = " Login "/><br />
+            <input type = "submit" class="btn btn-primary btn-block" value = " Submit "/><br />
         </form>
         <div class="text-center">
           <!-- <a class="d-block small mt-3" href="register.html">Register an Account</a> -->

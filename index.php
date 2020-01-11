@@ -5,8 +5,8 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $myemail = mysqli_real_escape_string($db,$_POST['inputEmail']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['inputPassword']); 
+      $myemail = mysqli_real_escape_string($link,$_POST['inputEmail']);
+      $mypassword = mysqli_real_escape_string($link,$_POST['inputPassword']); 
       
       $sql = "SELECT passcode, email FROM users WHERE email = '$myemail' and passcode = '$mypassword'";
       $result = mysqli_query($db,$sql);

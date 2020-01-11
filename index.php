@@ -2,13 +2,13 @@
    include("config.php");
    session_start();
    
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
+   if(isset($_POST['login'])) {
       // username and password sent from form 
       
       $myemail = mysqli_real_escape_string($link,$_POST['inputEmail']);
       $mypassword = mysqli_real_escape_string($link,$_POST['inputPassword']); 
       
-      $sql = "SELECT passcode, email FROM users WHERE email = '$myemail' and passcode = '$mypassword'";
+      $sql = "SELECT (passcode, email) FROM users WHERE email = '$myemail' and passcode = '$mypassword'";
       $result = mysqli_query($link,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
@@ -78,7 +78,7 @@
             </div>
           </div>
           <!--<a class="btn btn-primary btn-block" href="dashboard.html">Login</a>-->
-            <input type = "submit" class="btn btn-primary btn-block" value = " Submit "/><br />
+            <input name="login" type = "submit" class="btn btn-primary btn-block" value = " Log In "/><br />
         </form>
         <div class="text-center">
           <!-- <a class="d-block small mt-3" href="register.html">Register an Account</a> -->

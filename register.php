@@ -3,7 +3,7 @@
    include("config.php");
    //session_start();
 
-   if(isset($_POST['submit'])){
+   if(isset($_POST['submituser'])){
        $new_firstname = mysqli_real_escape_string($link,$_POST['firstname']);
        $new_lastname = mysqli_real_escape_string($link,$_POST['lastname']); 
        $new_email = mysqli_real_escape_string($link,$_POST['inputEmail']); 

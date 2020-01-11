@@ -8,7 +8,7 @@
       $myemail = mysqli_real_escape_string($link,$_POST['inputEmail']);
       $mypassword = mysqli_real_escape_string($link,$_POST['inputPassword']); 
       
-      $sql = "SELECT (passcode, email) FROM users WHERE email = '$myemail' AND passcode = '$mypassword'";
+      $sql = "SELECT passcode, email FROM users WHERE email = '$myemail' AND passcode = '$mypassword'";
       $result = mysqli_query($link,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
@@ -18,7 +18,7 @@
       // If result matched $myusername and $mypassword, table row must be 1 row
 		
       if($count == 1) {
-         session_register("myemail");
+         session_register("$myemail");
          $_SESSION['User_email'] = $myemail;
          
          //header("location: dashboard.php");

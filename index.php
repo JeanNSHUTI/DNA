@@ -2,7 +2,7 @@
    include("config.php");
    session_start();
    
-   if(isset($_POST['login'])) {
+   if(isset($_POST['loginuser'])) {
       // username and password sent from form 
       
       $myemail = mysqli_real_escape_string($link,$_POST['inputEmail']);
@@ -78,7 +78,7 @@
             </div>
           </div>
           <!--<a class="btn btn-primary btn-block" href="dashboard.html">Login</a>-->
-            <input name="login" type = "submit" class="btn btn-primary btn-block" value = " Log In "/><br />
+            <input name="loginuser" type = "submit" class="btn btn-primary btn-block" value = " Log In "/><br />
         </form>
         <div class="text-center">
           <!-- <a class="d-block small mt-3" href="register.html">Register an Account</a> -->

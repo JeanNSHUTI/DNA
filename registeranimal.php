@@ -29,7 +29,7 @@
     <div class="card card-register mx-auto mt-5">
       <div class="card-header">Register a new Animal</div>
       <div class="card-body">
-        <form action="registeranimal.php" method="post">
+        <form action="registeranimaldb.php" method="post">
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">

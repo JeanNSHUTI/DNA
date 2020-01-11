@@ -12,11 +12,11 @@
 
    $sql = "INSERT INTO animal (animal_id, createdBy, name, dateOfbirth, actualweight) VALUES ('$new_animalID', 'sU44222', '$new_name', '$new_yearofbirth', '$$new_weight')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($link->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    $conn->close();
+    $link->close();
 ?>

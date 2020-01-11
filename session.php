@@ -4,7 +4,7 @@
    
    $user_check = $_SESSION['User_email'];
    
-   $ses_sql = mysqli_query($db,"SELECT email FROM users WHERE email = '$user_check' ");
+   $ses_sql = mysqli_query($link,"SELECT email FROM users WHERE email = '$user_check' ");
    
    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
    

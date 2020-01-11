@@ -9,7 +9,7 @@
       $mypassword = mysqli_real_escape_string($link,$_POST['inputPassword']); 
       
       $sql = "SELECT passcode, email FROM users WHERE email = '$myemail' and passcode = '$mypassword'";
-      $result = mysqli_query($db,$sql);
+      $result = mysqli_query($link,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
       $active = $row['active'];
       
@@ -59,7 +59,7 @@
         <form action = "" method="POST">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" name = "inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <input type="text" name = "inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
               <label for="inputEmail">E-mail Address</label>
             </div>
           </div>

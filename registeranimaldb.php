@@ -1,6 +1,6 @@
 <?php
-   include('session.php');
-   //include("config.php");
+   //include('session.php');
+   include("config.php");
    //session_start();
 
    if(isset($_POST['submitanimal'])){

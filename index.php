@@ -22,7 +22,7 @@
          $_SESSION['User_email'] = $myemail;
          
          //header("location: dashboard.php");
-          header("location: blank.html");
+          header("location: dashboard.php");
       }else {
          $error = "Your Login Name or Password is invalid";
       }

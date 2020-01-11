@@ -29,7 +29,7 @@
      //  echo "Error: Passwords do not match";
        //}
 
-   $conn->close();
+   //$conn->close();
 ?>
 
 <!DOCTYPE html>

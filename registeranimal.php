@@ -18,7 +18,7 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
 
-    $conn->close();
+    //$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -3,6 +3,9 @@
    include("config.php");
    //session_start();
 
+   $new_confirmpassword = ""; 
+   $new_password = "";
+
    if(isset($_POST['submit'])){
        $new_firstname = mysqli_real_escape_string($db,$_POST['firstname']);
        $new_lastname = mysqli_real_escape_string($db,$_POST['lastname']); 

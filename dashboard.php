@@ -57,7 +57,7 @@
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
           <a class="dropdown-item" href="#">Activity Log</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="logout.php" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
         </div>
       </li>
     </ul>
@@ -97,10 +97,20 @@
           <span>Charts</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="register.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Register new User</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="registeranimal.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Register new Animal</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="tables.html">
           <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
-      </li>
+          <span>Schedule DNA Downtime</span></a>
+      </li>        
     </ul>
 
     <div id="content-wrapper">

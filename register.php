@@ -1,3 +1,34 @@
+<?php
+   //include('session.php');
+   include("config.php");
+   //session_start();
+
+   if(isset($_POST['submit'])){
+       $new_firstname = mysqli_real_escape_string($db,$_POST['firstname']);
+       $new_lastname = mysqli_real_escape_string($db,$_POST['lastname']); 
+       $new_email = mysqli_real_escape_string($db,$_POST['inputEmail']); 
+       $new_username = mysqli_real_escape_string($db,$_POST['inputUsername']); 
+       $new_password = mysqli_real_escape_string($db,$_POST['inputPassword']);
+       $new_confirmpassword = mysqli_real_escape_string($db,$_POST['confirmPassword']);
+   }
+
+   if(strcmp(new_password, new_confirmpassword)==0){
+       $sql = "INSERT INTO users (username, firstname, surname, passcode, email) VALUES ('$new_username', '$new_firstname', '$new_lastname', '$new_password', '$new_email')";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "New record created successfully";
+            // register change in notifications table here !!
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+   }
+   else {
+       echo "Error: Passwords do not match";
+       }
+
+   $conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +61,13 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
+                  <input type="text" id="firstName"  name="firstName" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
                   <label for="firstName">First name</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="lastName" class="form-control" placeholder="Last name" required="required">
+                  <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Last name" required="required">
                   <label for="lastName">Last name</label>
                 </div>
               </div>
@@ -44,13 +75,13 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="required">
+              <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required="required">
               <label for="inputEmail">Email address</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="text" id="inputUsername" class="form-control" placeholder="Username" required="required">
+              <input type="text" id="inputUsername" name="inputUsername" class="form-control" placeholder="Username" required="required">
               <label for="inputUsername">Username</label>
             </div>
           </div>            
@@ -58,19 +89,20 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+                  <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required="required">
                   <label for="inputPassword">Password</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required">
+                  <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm password" required="required">
                   <label for="confirmPassword">Confirm password</label>
                 </div>
               </div>
             </div>
           </div>
-          <a type = "submit" class="btn btn-primary btn-block" href="login.html">Register</a>
+          <!-- <a type = "submit" class="btn btn-primary btn-block" href="login.html">Register</a> -->
+          <input type = "submit" class="btn btn-primary btn-block" value = " Register User "/><br />
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="login.html">Cancel</a>

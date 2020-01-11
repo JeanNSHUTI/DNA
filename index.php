@@ -5,8 +5,8 @@
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
-      $myemail = mysqli_real_escape_string($db,$_POST['email']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      $myemail = mysqli_real_escape_string($db,$_POST['inputEmail']);
+      $mypassword = mysqli_real_escape_string($db,$_POST['inputPassword']); 
       
       $sql = "SELECT passcode, email FROM users WHERE email = '$myemail' and passcode = '$mypassword'";
       $result = mysqli_query($db,$sql);
@@ -59,13 +59,13 @@
         <form action = "" method="POST">
           <div class="form-group">
             <div class="form-label-group">
-              <input type="email" name = "email" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
+              <input type="email" name = "inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus">
               <label for="inputEmail">E-mail Address</label>
             </div>
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input type="password" name = "password" id="inputPassword" class="form-control" placeholder="Password" required="required">
+              <input type="password" name = "inputPassword" id="inputPassword" class="form-control" placeholder="Password" required="required">
               <label for="inputPassword">Password</label>
             </div>
           </div>

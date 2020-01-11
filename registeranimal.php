@@ -1,3 +1,25 @@
+<?php
+   //include('session.php');
+   include("config.php");
+   //session_start();
+
+   if(isset($_POST['submit'])){
+       $new_name = mysqli_real_escape_string($db,$_POST['inputName']);
+       $new_animalID = mysqli_real_escape_string($db,$_POST['inputAID']); 
+       $new_weight = mysqli_real_escape_string($db,$_POST['inputWeight']); 
+       $new_yearofbirth = mysqli_real_escape_string($db,$_POST['inputYOB']); 
+   }
+
+   $sql = "INSERT INTO animal (animal_id, createdBy, name, dateOfbirth, actualweight) VALUES ('$new_animalID', 'sU44222', '$new_name', '$new_yearofbirth', '$$new_weight')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +52,13 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="inputName" class="form-control" placeholder="Name" required="required" autofocus="autofocus">
+                  <input type="text" id="inputName" name="inputName" class="form-control" placeholder="Name" required="required" autofocus="autofocus">
                   <label for="inputName">Animal Name</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="inputAID" class="form-control" placeholder="Animal ID" required="required">
+                  <input type="text" id="inputAID" name="inputAID" class="form-control" placeholder="Animal ID" required="required">
                   <label for="inputYOB">Animal ID</label>
                 </div>
               </div>
@@ -46,19 +68,20 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="inputWeight" class="form-control" placeholder="Weight" required="required">
+                  <input type="text" id="inputWeight" name="inputWeight" class="form-control" placeholder="Weight" required="required">
                   <label for="inputWeight">Actual Weight</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="inputYOB" class="form-control" placeholder="Year of Birth" required="required">
+                  <input type="text" id="inputYOB" name="inputYOB" class="form-control" placeholder="Year of Birth" required="required">
                   <label for="inputYOB">Year Of Birth</label>
                 </div>
               </div>
             </div>
           </div>
-          <a type = "submit" class="btn btn-primary btn-block" href="login.html">Register</a>
+          <!--<a type = "submit" class="btn btn-primary btn-block" href="login.html">Register</a>-->
+          <input type = "submit" class="btn btn-primary btn-block" value = " Register Animal "/><br />
         </form>
         <div class="text-center">
           <a class="d-block small mt-3" href="login.html">Cancel</a>

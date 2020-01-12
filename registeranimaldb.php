@@ -16,15 +16,18 @@
    $sql = "INSERT INTO animal (animal_id, createdBy, name, dateOfbirth, actualweight) VALUES ('$new_animalID', '$username', '$new_name', '$new_yearofbirth', '$new_weight')";
 
     if ($link->query($sql) === TRUE) {
-        echo "New record created successfully";
+        //echo "New record created successfully";
         
         //activity log
         $user_type = "REGISTER";
         
         $sql1 = "INSERT INTO notification (animal_id, username, type, name, dateOfbirth, actualweight) VALUES ('$new_animalID', '$username', $user_type, '$new_name', '$new_yearofbirth', '$new_weight')";
         
-        $link->query($sql1);
-        
+        if ($link->query($sql1) === TRUE) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql1 . "<br>" . $link->error;            
+        }
     } else {
         echo "Error: " . $sql . "<br>" . $link->error;
     }

@@ -23,8 +23,8 @@
               //sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
               
               if ($link->query($sql) === TRUE) {
-               //   echo "Updated password successfully";
-            //      header("location: index.php"); 
+                  echo "Updated password successfully";
+                  header("location: index.php"); 
               } else {
                   echo "Error: " . $sql1 . "<br>" . $link->error;            
               }   

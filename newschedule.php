@@ -11,7 +11,7 @@
    $new_enddown = mysqli_real_escape_string($link,$_POST['inputEnd']); 
    }
 
-   $sql = "INSERT INTO system_schedule (setBy, downtime_startTime, downtime_endTime) VALUES ('sU44222', '$new_startdown', '$new_enddown')";
+   $sql = "INSERT INTO system_schedule (setBy, downtime_startTime, downtime_endTime) VALUES ('$username', '$new_startdown', '$new_enddown')";
 
     if ($link->query($sql) === TRUE) {
         //echo "New record created successfully";

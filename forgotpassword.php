@@ -1,5 +1,5 @@
 <?php
-   //include("config.php");
+   include("config.php");
    //session_start();
    
    if(isset($_POST['submitEdituser'])) {
@@ -17,9 +17,11 @@
       
       // If result matched $myemail, table row must be 1 row
 		
-      if($count == 1) {
-          if(strcmp($new_password, $confirm_password) == 0){
+     /* if($count == 1) {
+          if(strcmp($new_password, $confirm_password) === 0){
+              
               sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
+              
               if ($link->query($sql1) === TRUE) {
                   echo "Updated password successfully";
                   header("location: index.php"); 
@@ -32,7 +34,7 @@
       }else {
           $error = "You are not yet registered as a user";
           echo "$error";      
-      }
+      }*/
    }
 ?>
 
@@ -65,7 +67,7 @@
       <div class="card-body">
         <div class="text-center mb-4">
           <h4>Forgot your password?</h4>
-          <!--<p>Enter your email address and we will send you instructions on how to reset your password.</p>-->
+          <p>Enter your email address and reset your password.</p>
         </div>
         <form action="" method="POST">          
           <div class="form-group">

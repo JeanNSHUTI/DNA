@@ -27,6 +27,7 @@
           header("location: dashboard.php");
       }else {
          $error = "Your Login Name or Password is invalid";
+         echo "$error";
       }
    }
 ?>

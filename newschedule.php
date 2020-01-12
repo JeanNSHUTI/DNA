@@ -22,12 +22,21 @@
         $sql1 = "INSERT INTO notification (username, type, downtime_startTime, downtime_endTime) VALUES ('$username', '$_type', '$new_startdown', '$new_enddown')";
         
         if ($link->query($sql1) === TRUE) {
-            echo "New record created successfully";
+            //echo "New record created successfully";
+            echo "<script type='text/javascript'>alert('New record created successfully');
+            window.location='dashboard.php';
+            </script>"; 
         } else {
-            echo "Error: " . $sql1 . "<br>" . $link->error;            
+            //echo "Error: " . $sql1 . "<br>" . $link->error; 
+            echo "<script type='text/javascript'>alert('Error:' . $sql1 . '<br>' . $link->error);
+            window.location='dashboard.php';
+            </script>";               
         }
     } else {
-        echo "Error: " . $sql . "<br>" . $link->error;
+        //echo "Error: " . $sql . "<br>" . $link->error;
+        echo "<script type='text/javascript'>alert('Error:' . $sql . '<br>' . $link->error);
+        window.location='dashboard.php';
+        </script>";           
     }
 
     $link->close();

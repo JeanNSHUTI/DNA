@@ -16,10 +16,15 @@
    $sql = "INSERT INTO users (username, firstname, surname, passcode, super_user, email) VALUES ('$new_username', '$new_firstname', '$new_lastname', '$new_password', FALSE, '$new_email')";
 
     if ($link->query($sql) === TRUE) {
-        echo "New record created successfully";
-        // register change in notifications table here !!
+        //echo "New record created successfully";
+        echo "<script type='text/javascript'>alert('New record created successfully');
+        window.location='dashboard.php';
+        </script>";
     } else {
-        echo "Error: " . $sql . "<br>" . $link->error;
+        //echo "Error: " . $sql . "<br>" . $link->error;
+        echo "<script type='text/javascript'>alert('Error:' . $sql . '<br>' . $link->error);
+        window.location='dashboard.php';
+        </script>";         
     }
 
    $link->close();

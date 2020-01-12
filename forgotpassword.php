@@ -24,13 +24,12 @@
               
               if ($link->query($sql1) === TRUE) {
                   //echo "Updated password successfully";
-                  echo "<script type='text/javascript'>alert-success('Updated password successfully');
+                  echo "<script type='text/javascript'>alert('Updated password successfully');
                   window.location='index.php';
                   </script>";
-                  header("location: index.php"); 
               } else {
                   //echo "Error: " . $sql1 . "<br>" . $link->error; 
-                  echo "<script type='text/javascript'>alert-info('Error:' . $sql . '<br>' . $link->error);
+                  echo "<script type='text/javascript'>alert('Error:' . $sql . '<br>' . $link->error);
                   window.location='index.php';
                   </script>";                  
               }   
@@ -42,7 +41,7 @@
           }           
       }else {
           //echo "You are not yet registered as a user";
-          echo "<script type='text/javascript'>alert-info('You are not yet registered as a user');
+          echo "<script type='text/javascript'>alert('You are not yet registered as a user');
           window.location='index.php';
           </script>";      
       }

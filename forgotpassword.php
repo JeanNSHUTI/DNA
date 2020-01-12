@@ -20,7 +20,7 @@
      if($count == 1) {
           if(strcmp($new_password, $confirm_password) === 0){
               
-              //sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
+              $sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
               
               if ($link->query($sql) === TRUE) {
                   echo "Updated password successfully";

@@ -21,7 +21,7 @@
         //activity log
         $user_type = "REGISTER";
         
-        $sql1 = "INSERT INTO notification (animal_id, username, type, name, dateOfbirth, actualweight) VALUES ('$new_animalID', '$username', $user_type, '$new_name', '$new_yearofbirth', '$new_weight')";
+        $sql1 = "INSERT INTO notification (animal_id, username, type, name, dateOfbirth, actualweight) VALUES ('$new_animalID', '$username', '$user_type', '$new_name', '$new_yearofbirth', '$new_weight')";
         
         if ($link->query($sql1) === TRUE) {
             echo "New record created successfully";

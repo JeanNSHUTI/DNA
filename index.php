@@ -72,14 +72,6 @@
               <label for="inputPassword">Password</label>
             </div>
           </div>
-          <div class="form-group">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me">
-                Remember Password
-              </label>
-            </div>
-          </div>
           <!--<a class="btn btn-primary btn-block" href="dashboard.html">Login</a>-->
             <input name="loginuser" type = "submit" class="btn btn-primary btn-block" value = " Log In "/><br />
         </form>

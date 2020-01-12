@@ -75,6 +75,9 @@
         </a>
       </li>
       <?php
+      echo '<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">';
+      echo '<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">';
+      echo '<link href="css/sb-admin.css" rel="stylesheet">';
       echo '<html>';
       echo '<li'; 
       echo 'class="nav-item">';

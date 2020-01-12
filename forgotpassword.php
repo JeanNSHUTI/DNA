@@ -23,17 +23,28 @@
               $sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
               
               if ($link->query($sql1) === TRUE) {
-                  echo "Updated password successfully";
+                  //echo "Updated password successfully";
+                  echo "<script type='text/javascript'>alert-success('Updated password successfully');
+                  window.location='index.php';
+                  </script>";
                   header("location: index.php"); 
               } else {
-                  echo "Error: " . $sql1 . "<br>" . $link->error;            
+                  //echo "Error: " . $sql1 . "<br>" . $link->error; 
+                  echo "<script type='text/javascript'>alert-info('Error:' . $sql . '<br>' . $link->error);
+                  window.location='index.php';
+                  </script>";                  
               }   
           }else{
-              echo "Passwords do not match";
+              //echo "Passwords do not match";
+              echo "<script type='text/javascript'>alert-success('Passwords do not match. Redirecting..');
+              window.location='index.php';
+              </script>";              
           }           
       }else {
-          $error = "You are not yet registered as a user";
-          echo "$error";      
+          //echo "You are not yet registered as a user";
+          echo "<script type='text/javascript'>alert-success('You are not yet registered as a user');
+          window.location='index.php';
+          </script>";      
       }
    }
 ?>

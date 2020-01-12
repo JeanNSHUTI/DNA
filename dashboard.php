@@ -74,19 +74,11 @@
           <span>Dashboard</span>
         </a>
       </li>
-      <?php
-      echo '<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">';
-      echo '<link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">';
-      echo '<link href="css/sb-admin.css" rel="stylesheet">';
-      echo '<html>';
-      echo '<li'; 
-      echo 'class="nav-item">';
-      echo '<a class="nav-link" href="register.php">';
-      echo '<i class="fas fa-fw fa-table"></i>';    
-      echo '<span>';
-      echo 'Register new User</span></a>';      
-      echo '</li>';
-      ?>
+      <li class='nav-item'>
+      <a class="nav-link" href="register.php">
+      <i class="fas fa-fw fa-table"></i>    
+      <span>Register new User</span></a>      
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="registeranimal.php">
           <i class="fas fa-fw fa-table"></i>

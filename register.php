@@ -1,5 +1,11 @@
 <?php
    include("session.php");
+   session_start();   
+   
+   //Check if user is a super user, if not redirect to dashboard
+   if(!isset($_SESSION['User_type'])){
+      header("location:dashboard.php");
+   }
 ?>
 
 <!DOCTYPE html>

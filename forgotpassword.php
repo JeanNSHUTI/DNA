@@ -20,14 +20,14 @@
      if($count == 1) {
           if(strcmp($new_password, $confirm_password) === 0){
               
-              sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
+              //sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
               
-             // if ($link->query($sql1) === TRUE) {
+              if ($link->query($sql) === TRUE) {
                //   echo "Updated password successfully";
             //      header("location: index.php"); 
-            //  } else {
-            //      echo "Error: " . $sql1 . "<br>" . $link->error;            
-        //      }   
+              } else {
+                  echo "Error: " . $sql1 . "<br>" . $link->error;            
+              }   
           }else{
               echo "Passwords do not match";
           }           

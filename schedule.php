@@ -50,8 +50,8 @@
           <input name="submitschedule" type = "submit" class="btn btn-primary btn-block" value = " Save "/><br />
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="javascript:history.go(-1)">Cancel</a>
-          <!-- <a class="d-block small" href="forgot-password.html">Forgot Password?</a> -->
+          <a class="d-block small mt-3" href="javascript:history.go(-1)">Back</a>
+          <a class="d-block small mt-3" href="dashboard.php">Cancel</a> 
         </div>
       </div>
     </div>

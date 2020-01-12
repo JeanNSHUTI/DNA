@@ -36,13 +36,13 @@
               }   
           }else{
               //echo "Passwords do not match";
-              echo "<script type='text/javascript'>alert-success('Passwords do not match. Redirecting..');
+              echo "<script type='text/javascript'>alert('Passwords do not match. Redirecting..');
               window.location='index.php';
               </script>";              
           }           
       }else {
           //echo "You are not yet registered as a user";
-          echo "<script type='text/javascript'>alert-success('You are not yet registered as a user');
+          echo "<script type='text/javascript'>alert-info('You are not yet registered as a user');
           window.location='index.php';
           </script>";      
       }

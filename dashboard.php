@@ -75,13 +75,14 @@
         </a>
       </li>
       <?php
-      echo "<html>";
-      echo "<li"; 
-      echo "class='nav-item'>";
-      echo "<a class='nav-link' href='register.php'>";
-      echo "<i class='fas fa-fw fa-table'></i>";    
-      echo "<span>Register new User</span></a>";      
-      echo "</li>";
+      echo '<html>';
+      echo '<li'; 
+      echo 'class="nav-item">';
+      echo '<a class="nav-link" href="register.php">';
+      echo '<i class="fas fa-fw fa-table"></i>';    
+      echo '<span>';
+      echo 'Register new User</span></a>';      
+      echo '</li>';
       ?>
       <li class="nav-item">
         <a class="nav-link" href="registeranimal.php">

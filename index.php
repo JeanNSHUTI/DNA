@@ -8,10 +8,11 @@
       $myemail = mysqli_real_escape_string($link,$_POST['inputEmail']);
       $mypassword = mysqli_real_escape_string($link,$_POST['inputPassword']); 
       
-      $sql = "SELECT passcode, email FROM users WHERE email = '$myemail' AND passcode = '$mypassword'";
+      $sql = "SELECT passcode, email, super_user, username FROM users WHERE email = '$myemail' AND passcode = '$mypassword'";
       $result = mysqli_query($link,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
+      $usertype = $row['super_user'];
+      $myusername = $row['username'];
       
       $count = mysqli_num_rows($result);
       
@@ -19,6 +20,8 @@
 		
       if($count == 1) {
          $_SESSION['User_email'] = $myemail;
+         $_SESSION['Username'] = $myusername;
+         $_SESSION['User_type'] = $usertype;
          
          //header("location: dashboard.php");
           header("location: dashboard.php");

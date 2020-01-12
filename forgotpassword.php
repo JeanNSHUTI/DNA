@@ -17,7 +17,7 @@
       
       // If result matched $myemail, table row must be 1 row
 		
-     /* if($count == 1) {
+     if($count == 1) {
           if(strcmp($new_password, $confirm_password) === 0){
               
               sql1 = "UPDATE users SET passcode = '$new_password' WHERE email = '$my_email'";
@@ -34,7 +34,7 @@
       }else {
           $error = "You are not yet registered as a user";
           echo "$error";      
-      }*/
+      }
    }
 ?>
 

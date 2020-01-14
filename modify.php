@@ -148,7 +148,7 @@
                           <tr>  
                                <td><?php echo $row["time_stamp"]; ?></td>  
                                <td><?php echo $row["name"]; ?></td>
-                               <td><?php echo $row["createdBy"];?></td>
+                               <td><?php echo $row["createdBy"].firstname;?></td>
                                <td><?php echo $row["animal_id"];?></td>  
                                <td><?php echo $row["actualweight"]; ?></td>   
                                <td><?php echo $animal_age; ?></td>  

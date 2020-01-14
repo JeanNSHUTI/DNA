@@ -145,10 +145,10 @@
                        {
                            $animal_age = $year - $row["dateOfbirth"]; 
                           ?>  
-                          <tr>  
+                          <tr data-href = "register.php">  
                                <td><?php echo $row["time_stamp"]; ?></td>  
                                <td><?php echo $row["name"]; ?></td>
-                               <td><?php echo $row["createdBy"].firstname;?></td>
+                               <td><?php echo $row["createdBy"];?></td>
                                <td><?php echo $row["animal_id"];?></td>  
                                <td><?php echo $row["actualweight"]; ?></td>   
                                <td><?php echo $animal_age; ?></td>  
@@ -224,6 +224,15 @@
 
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
+    
+  <!-- script for hyperlink for table elements -->
+    <script>
+        $(document).ready(function(){
+            $(document.body).on("click", "tr[data-href]", function(){
+                window.location.href = this.dataset.href;
+            });
+        });
+    </script>
 
 </body>
 

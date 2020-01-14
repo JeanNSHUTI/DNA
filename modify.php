@@ -43,7 +43,7 @@
     </button>
 
     <!-- Navbar -->
-    <ul class="navbar-nav ml-auto ml-md-0">
+    <ul class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user-circle fa-fw"></i>
@@ -106,7 +106,7 @@
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-             Animal Feed Report</div>
+             Animal List</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -114,6 +114,7 @@
                   <tr>
                     <th>Date</th>  
                     <th>Name</th>
+                    <th>Created By</th>  
                     <th>AID</th>
                     <th>Weight</th>
                     <th>Age</th>
@@ -125,6 +126,7 @@
                   <tr>
                     <th>Date</th>  
                     <th>Name</th>
+                    <th>Created By</th> 
                     <th>AID</th>
                     <th>Weight</th>
                     <th>Age</th>
@@ -145,7 +147,8 @@
                           ?>  
                           <tr>  
                                <td><?php echo $row["time_stamp"]; ?></td>  
-                               <td><?php echo $row["name"]; ?></td>  
+                               <td><?php echo $row["name"]; ?></td>
+                               <td><?php echo $row["createdBy"];?></td>
                                <td><?php echo $row["animal_id"];?></td>  
                                <td><?php echo $row["actualweight"]; ?></td>   
                                <td><?php echo $animal_age; ?></td>  
@@ -160,12 +163,8 @@
               </table>
             </div>
           </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          <div class="card-footer small text-muted">Updated on :  <?php echo date("l jS \of F Y h:i:s A")?></div>
         </div>
-
-        <p class="small text-center text-muted my-5">
-          <em>More table examples coming soon...</em>
-        </p>
 
       </div>
       <!-- /.container-fluid -->
@@ -174,7 +173,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © Your Website 2019</span>
+            <span>Copyright © https://airworthy-mandrill-9741.dataplicity.io/DNA <?php echo date("Y");?></span>
           </div>
         </div>
       </footer>

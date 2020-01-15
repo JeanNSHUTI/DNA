@@ -110,8 +110,7 @@
                         <th>Created By</th>  
                         <th>AID</th>
                         <th>Weight (Kg)</th>
-                        <th>Age</th>
-                        <th>DELETE</th>  
+                        <th>Age</th> 
                       </tr>
                     </thead>
                     <tfoot>
@@ -120,8 +119,7 @@
                         <th>Created By</th> 
                         <th>AID</th>
                         <th>Weight (Kg)</th>
-                        <th>Age</th>
-                        <th>DELETE</th>  
+                        <th>Age</th> 
                       </tr>
                     </tfoot>
                     <tbody>

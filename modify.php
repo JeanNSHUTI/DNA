@@ -137,14 +137,13 @@
                               <tr>   
                                    <td>
                                        <div contentEditable= 'true' class='form-control' > 
-                                       <?php echo $row["name"]; ?>
-                                       <input type="hidden" id="animalname" name="animalname">   
-                                       </div>   
+                                       <?php echo $row["name"]; ?></div> 
+                                       <input type="hidden" id="animalname" name="animalname">     
                                    </td>
                                    <td><?php echo $row["createdBy"];?></td>
                                    <td>
                                        <?php echo $row["animal_id"]; ?>
-                                       <input type="hidden" id="animalID" name="animalID" value="<?php echo $row["animal_id"]; ?>"> 
+                                       <input type="hidden" id="animalID" name="animalID" value="<?php echo $row["animal_id"]; ?>">
                                    </td>  
                                    <td>
                                        <div contentEditable= 'true' class='form-control' > 

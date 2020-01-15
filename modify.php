@@ -62,7 +62,7 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="dashboard.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
@@ -83,7 +83,7 @@
           <i class="fas fa-fw fa-table"></i>
           <span>Schedule DNA Downtime</span></a>
       </li> 
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="modify.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Modify Animal</span></a>

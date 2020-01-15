@@ -223,7 +223,7 @@
         <div class="modal-body">Select "Delete" below if you are sure you want to delete animal from Database.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" id="animalIDD" name="animalIDD" href="animalupdate.php" value="<?php echo $aid?>">Delete</a> -->
+          <a class="btn btn-primary" id="animalIDD" name="animalIDD" href="animalupdate.php" value="<?php echo $aid?>">Delete</a>
         </div>
       </div>
     </div>

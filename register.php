@@ -4,7 +4,9 @@
    
    //Check if user is a super user, if not redirect to dashboard
    if($_SESSION['User_type'] != 1){
-      header("location:dashboard.php");
+        echo "<script type='text/javascript'>alert('Alert: Only super users may register new users');
+        window.location='dashboard.php';
+        </script>";
    }
 ?>
 

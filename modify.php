@@ -111,6 +111,7 @@
                         <th>AID</th>
                         <th>Weight (Kg)</th>
                         <th>Age</th>
+                        <th>DELETE</th>  
                       </tr>
                     </thead>
                     <tfoot>
@@ -120,6 +121,7 @@
                         <th>AID</th>
                         <th>Weight (Kg)</th>
                         <th>Age</th>
+                        <th>DELETE</th>  
                       </tr>
                     </tfoot>
                     <tbody>
@@ -152,7 +154,8 @@
                                        </div>
                                        <input type="hidden" id="animalweight" name="animalweight">                               
                                    </td>   
-                                   <td><?php echo $animal_age; ?></td>  
+                                   <td><?php echo $animal_age; ?></td>
+                                  <td><?php echo "<th><a href='animalupdate.php'>DELETE</a></th>";?></td>
                               </tr>  
                               <?php  
                            }  

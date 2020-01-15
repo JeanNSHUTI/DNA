@@ -143,14 +143,23 @@
                   {  
                        while($row = mysqli_fetch_array($result))  
                        {
+                           $aid = $row['animal_id'];  // save ID for update
                            $animal_age = $year - $row["dateOfbirth"]; 
                           ?>  
-                          <tr data-href = "register.php">  
+                          <tr>  
                                <td><?php echo $row["time_stamp"]; ?></td>  
-                               <td><?php echo $row["name"]; ?></td>
+                               <td>
+                                   <div contentEditable= 'true' class='form-control' id='name_<?php echo $aid; ?>'>  
+                                   <?php echo $row["name"]; ?>
+                                   </div>
+                               </td>
                                <td><?php echo $row["createdBy"];?></td>
-                               <td><?php echo $row["animal_id"];?></td>  
-                               <td><?php echo $row["actualweight"]; ?></td>   
+                               <td><?php echo $row["animal_id"]; ?></td>  
+                               <td>
+                                   <div contentEditable= 'true' class='form-control' id='actualweight_<?php echo $aid; ?>'>
+                                   <?php echo $row["actualweight"]; ?>
+                                   </div>                                   
+                               </td>   
                                <td><?php echo $animal_age; ?></td>  
                                <td><?php echo $row["animal_alertStatus"]; ?></td>  
                                <td><?php echo $row["dailyIntake"]; ?></td>  
@@ -228,8 +237,29 @@
   <!-- script for hyperlink for table elements -->
     <script>
         $(document).ready(function(){
-            $(document.body).on("click", "tr[data-href]", function(){
-                window.location.href = this.dataset.href;
+            // Add Class
+            $('.form-control').click(function(){
+                $(this).addClass('editMode');
+            });
+            
+            // Save data
+            $(".form-control").focusout(function(){
+                $(this).removeClass("editMode");
+                var id = this.id;
+                var split_id = id.split("_");
+                var field_name = split_id[0];
+                var edit_id = split_id[1];
+                var value = $(this).text();
+           
+            $.ajax({
+                url: 'animalupdate.php',
+                type: 'post',
+                data: { field:field_name, value:value, id:edit_id },
+                success:function(response){
+                    console.log('Save successfully'); 
+                }
+            });
+            
             });
         });
     </script>

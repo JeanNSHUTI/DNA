@@ -10912,3 +10912,11 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+
+.edit{
+ width: 100%;
+ height: 25px;
+}
+.editMode{
+ border: 1px solid black;
+}

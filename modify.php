@@ -102,7 +102,7 @@
           <div class="card-body">
             <div class="table-responsive">
                 <form method="post" action="animalupdate.php">
-                <input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />
+                <!--<input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />-->
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr> 
@@ -162,7 +162,7 @@
                     </tbody>
                   </table>                    
 
-                
+                <input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />
                 </form>
             </div>
           </div>
@@ -224,7 +224,7 @@
         <div class="modal-body">Select "Delete" below if you are sure you want to delete animal from Database.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" id="animalIDD" name="animalIDD" href="animalupdate.php" value="<?php echo $aid?>">Delete</a>
+          <a class="btn btn-primary" id="animalIDD" name="animalIDD" href="animalupdate.php" value="<?php echo $aid?>">Delete</a> -->
         </div>
       </div>
     </div>
@@ -249,7 +249,7 @@
   <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
     
   <!-- script for hyperlink for table elements -->
-   <script type="text/javascript"> 
+   <!--<script type="text/javascript"> 
         $(document).ready(function(){
             // Add Class
             $('.form-control').click(function(){
@@ -276,7 +276,21 @@
             
             });
         });
-    </script>  
+    </script> -->
+
+  <!-- script for hyperlink for table elements -->
+   <!--<script type="text/javascript"> 
+        $(document).ready(function() {
+          $(document).on("submit", "form#new_expandable", function(e) {
+            e.preventDefault();
+
+            var contents = $(".expandable-input").html();
+
+            $('input#expandable').val(contents);
+            this.submit();
+          });
+        });
+    </script>     -->
 
 </body>
 

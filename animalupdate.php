@@ -12,6 +12,7 @@
 
     echo 1;
 
+
    /*if(isset($_POST['submitAupdate'])){
        $new_name = mysqli_real_escape_string($link,$_POST['animalname']);
        $new_weight = mysqli_real_escape_string($link,$_POST['actualweight']); 
@@ -37,6 +38,6 @@
         </script>";         
     }
 
-   $link->close();
-?> */
+   $link->close();*/
+?> 
 

@@ -14,7 +14,7 @@
 
 
    //if(isset($_POST['submitAupdate'])){
-   $new_name = mysqli_real_escape_string($link,$_POST['animal_Name']);
+   $new_name = mysqli_real_escape_string($link,$_POST['animalname']);
    $new_weight = mysqli_real_escape_string($link,$_POST['animalweight']); 
    $aid = mysqli_real_escape_string($link,$_POST['animalID']);
    $aidd = mysqli_real_escape_string($link,$_POST['animalIDD']);

@@ -136,7 +136,7 @@
                               ?>  
                               <tr>   
                                    <td>
-                                       <div contentEditable= 'true' class='form-control' id="animalname" name="animalname"> 
+                                       <div contentEditable= 'true' class='form-control' > 
                                        <?php echo $row["name"]; ?>
                                        <input type="hidden" id="animalname" name="animalname">   
                                        </div>   
@@ -147,7 +147,7 @@
                                        <input type="hidden" id="animalID" name="animalID" value="<?php echo $row["animal_id"]; ?>"> 
                                    </td>  
                                    <td>
-                                       <div contentEditable= 'true' class='form-control' id='actualweight_<?php echo $aid; ?>'> 
+                                       <div contentEditable= 'true' class='form-control' > 
                                        <?php echo $row["actualweight"]; ?>
                                        </div>
                                        <input type="hidden" id="animalweight" name="animalweight">                               
@@ -284,9 +284,9 @@
           $(document).on("submit", "form#modify", function(e) {
             e.preventDefault();
 
-            var contents = $(".animalname").html();
+            var contents = $(".form-control").html();
 
-            $('animal_Name').val(contents);
+            $('input#animalname').val(contents);
             this.submit();
           });
         });

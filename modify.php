@@ -2,7 +2,7 @@
    include("session.php");
    include("config.php");
 
-   $sql = "SELECT * FROM animal INNER JOIN animal_feed ON animal.animal_id = animal_feed.animal_id";  
+   $sql = "SELECT * FROM animal";  
    $result = mysqli_query($link, $sql); 
   
 ?>
@@ -36,7 +36,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+    <a class="navbar-brand mr-1" href="index.html">DNA</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -120,8 +120,6 @@
                         <th>AID</th>
                         <th>Weight (Kg)</th>
                         <th>Age</th>
-                        <th>Alert status</th>   
-                        <th>Intake (grams)</th> 
                       </tr>
                     </thead>
                     <tfoot>
@@ -132,8 +130,6 @@
                         <th>AID</th>
                         <th>Weight (Kg)</th>
                         <th>Age</th>
-                        <th>Alert status</th>   
-                        <th>Intake (grams)</th>
                       </tr>
                     </tfoot>
                     <tbody>
@@ -159,7 +155,7 @@
                                    <td><?php echo $row["createdBy"];?></td>
                                    <td>
                                        <?php echo $row["animal_id"]; ?>
-                                       <input type="hidden" id="animalID" name="animalID"> 
+                                       <input type="hidden" id="animalID" name="animalID" value="<?php echo $row["animal_id"]; ?>"> 
                                    </td>  
                                    <td>
                                        <div contentEditable= 'true' class='form-control'> 
@@ -168,8 +164,6 @@
                                        <input type="hidden" id="animalweight" name="animalweight">                                 
                                    </td>   
                                    <td><?php echo $animal_age; ?></td>  
-                                   <td><?php echo $row["animal_alertStatus"]; ?></td>  
-                                   <td><?php echo $row["dailyIntake"]; ?></td>  
                               </tr>  
                               <?php  
                            }  

@@ -22,7 +22,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>DNA Admin - Dashboard</title>
+  <title>DNA Admin - User Activity Log</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -100,7 +100,7 @@
           <li class="breadcrumb-item">
             <a href="dashboard.php">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Chart</li>
+          <li class="breadcrumb-item active">Activity Log</li>
         </ol>         
 
       <div class="container-fluid">

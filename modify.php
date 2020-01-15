@@ -101,8 +101,8 @@
              Animal List</div>
           <div class="card-body">
             <div class="table-responsive">
-                <form method="post" action="animalupdate.php">
-                <!--<input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />-->
+                <form method="post" action="animalupdate.php" id = "modify">
+                <input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                       <tr> 
@@ -162,7 +162,7 @@
                     </tbody>
                   </table>                    
 
-                <input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />
+                
                 </form>
             </div>
           </div>
@@ -279,18 +279,18 @@
     </script> -->
 
   <!-- script for hyperlink for table elements -->
-   <!--<script type="text/javascript"> 
+   <script type="text/javascript"> 
         $(document).ready(function() {
-          $(document).on("submit", "form#new_expandable", function(e) {
+          $(document).on("submit", "form#modify", function(e) {
             e.preventDefault();
 
-            var contents = $(".expandable-input").html();
+            var contents = $(".animalname").html();
 
-            $('input#expandable').val(contents);
+            $('animal_Name').val(contents);
             this.submit();
           });
         });
-    </script>     -->
+    </script>     
 
 </body>
 

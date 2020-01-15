@@ -138,8 +138,8 @@
                                    <td>
                                        <div contentEditable= 'true' class='form-control' id='name_<?php echo $aid; ?>'> 
                                        <?php echo $row["name"]; ?>
+                                       <input type="hidden" id="animalname" name="animalname">   
                                        </div>   
-                                       <input type="hidden" id="animalname" name="animalname">
                                    </td>
                                    <td><?php echo $row["createdBy"];?></td>
                                    <td>

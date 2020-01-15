@@ -1,19 +1,19 @@
 <?php
-   //include('session.php');
+   include('session.php');
    include("config.php");
    //session_start();
 
-    $field = $_POST['field'];
+   /* $field = $_POST['field'];
     $value = $_POST['value'];
     $editid = $_POST['id'];
 
     $sql = "UPDATE animal SET '$field' = '$value' WHERE animal_id= '$editid'";
     mysqli_query($link,$sql);
 
-    echo 1;
+    echo 1;*/
 
 
-   /*if(isset($_POST['submitAupdate'])){
+   if(isset($_POST['submitAupdate'])){
        $new_name = mysqli_real_escape_string($link,$_POST['animalname']);
        $new_weight = mysqli_real_escape_string($link,$_POST['actualweight']); 
        $aid = mysqli_real_escape_string($link,$_POST['animalID']);
@@ -38,6 +38,6 @@
         </script>";         
     }
 
-   $link->close();*/
+   $link->close();
 ?> 
 

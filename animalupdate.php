@@ -26,7 +26,7 @@
     echo $aid;
     echo $aidd;
 
-    $sql1 = "UPDATE animal SET name = '$new_name', actualweight = '$new_weight' WHERE animal_id = '$aid'";
+    /*$sql1 = "UPDATE animal SET name = '$new_name', actualweight = '$new_weight' WHERE animal_id = '$aid'";
 
     if ($link->query($sql1) === TRUE) {
         //echo "New record created successfully";
@@ -38,7 +38,7 @@
         echo "<script type='text/javascript'>alert('Error:' . $sql . '<br>' . $link->error);
         window.location='dashboard.php';
         </script>";         
-    }
+    }*/
 
    $link->close();
 ?> 

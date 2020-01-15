@@ -2,7 +2,7 @@
    include("session.php");
    include("config.php");
 
-   $sql = "SELECT * FROM animal INNER JOIN animal_feed ON animal.animal_id = animal_feed.animal_id";  
+   $sql = "SELECT * FROM notification";  
    $result = mysqli_query($link, $sql); 
   
 ?>
@@ -90,9 +90,16 @@
     </ul>
 
     <div id="content-wrapper">
+        
+      <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="dashboard.php">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Chart</li>
+        </ol>         
 
       <div class="container-fluid">
-
         <!-- Icon Cards-->
         <div class="row">
           <div class="col-xl-3 col-sm-6 mb-3">
@@ -103,7 +110,7 @@
                 </div>
                 <div class="mr-5">11 New notifications</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="notification.php">
+              <a class="card-footer text-white clearfix small z-1" href="#">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -111,38 +118,38 @@
               </a>
             </div>
           </div>
-        </div>
+        </div>           
 
         <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
-            Animal Feed Report</div>
+            Notifications</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
                     <th>Date</th>  
-                    <th>Name</th>
                     <th>AID</th>
-                    <th>Weight (Kg)</th>
-                    <th>Age</th>
-                    <th>Alert status</th>   
-                    <th>Intake (grams)</th> 
-                    <th>DETAILS</th>
+                    <th>Done By</th>
+                    <th>Action</th>
+                    <th>Animal Name</th>
+                    <th>Animal DOB</th>   
+                    <th>Start Downtime</th> 
+                    <th>End Downtime</th>
                   </tr>
                 </thead>
                 <tfoot>
                   <tr>
                     <th>Date</th>  
-                    <th>Name</th>
                     <th>AID</th>
-                    <th>Weight (Kg)</th>
-                    <th>Age</th>
-                    <th>Alert status</th>   
-                    <th>Intake (grams)</th>
-                    <th>DETAILS</th>  
+                    <th>Done By</th>
+                    <th>Action</th>
+                    <th>Animal Name</th>
+                    <th>Animal DOB</th>   
+                    <th>Start Downtime</th> 
+                    <th>End Downtime</th>
                   </tr>
                 </tfoot>
                 <tbody>
@@ -154,17 +161,37 @@
                   {  
                        while($row = mysqli_fetch_array($result))  
                        {
-                           $animal_age = $year - $row["dateOfbirth"]; 
                           ?>  
                           <tr>  
-                               <td><?php echo $row["time_stamp"]; ?></td>  
-                               <td><?php echo $row["name"]; ?></td>  
-                               <td><?php echo $row["animal_id"];?></td>  
-                               <td><?php echo $row["actualweight"]; ?></td>   
-                               <td><?php echo $animal_age; ?></td>  
-                               <td><?php echo $row["animal_alertStatus"]; ?></td>  
-                               <td><?php echo $row["dailyIntake"]; ?></td> 
-                               <tD><?php echo "<a href='chart.php'>DETAILS</a>";?></tD>
+                               <td><?php echo $row["dateOfcreation"]; ?></td>  
+                               <td><?php
+                                        if(is_null($row["animal_id"])){
+                                            $aid = "-";
+                                        }else{
+                                            $aid = $row["animal_id"];
+                                        }
+                                        echo $aid; ?>
+                               </td>  
+                               <td><?php echo $row["username"];?></td>  
+                               <td><?php echo $row["type"]; ?></td>   
+                               <td><?php
+                                        if(is_null($row["name"])){
+                                            $name_ = "-";
+                                        }else{
+                                            $name_ = $row["name"];
+                                        }
+                                        echo $name_; ?>
+                               </td> 
+                               <td><?php
+                                        if(is_null($row["dateOfbirth"])){
+                                            $dob = "-";
+                                        }else{
+                                            $dob = $row["dateOfbirth"];
+                                        }
+                                        echo $dob; ?>
+                               </td> 
+                               <td><?php echo $row["downtime_startTime"]; ?></td> 
+                               <td><?php echo $row["downtime_endTime"]; ?></td>
                           </tr>  
                           <?php  
                        }  

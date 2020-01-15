@@ -2,7 +2,7 @@
    include("session.php");
    include("config.php");
 
-   $sql = "SELECT * FROM animal INNER JOIN animal_feed ON animal.animal_id = animal_feed.animal_id";  
+   $sql = "SELECT * FROM animal INNER JOIN animal_feed ON animal.animal_id = animal_feed.animal_id WHERE animal_alertStatus = TRUE";  
    $result = mysqli_query($link, $sql); 
   
 ?>
@@ -92,60 +92,15 @@
     <div id="content-wrapper">
 
       <div class="container-fluid">
+          
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="dashboard.php">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Notifications</li>
+        </ol>  
 
-        <!-- Icon Cards-->
-        <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-warning o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fas fa-fw fa-list"></i>
-                </div>
-                <div class="mr-5">11 New notifications</div>
-              </div>
-              <a class="card-footer text-white clearfix small z-1" href="notification.php">
-                <span class="float-left">View Details</span>
-                <span class="float-right">
-                  <i class="fas fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- DataTables Example -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Animal Feed Report</div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Date</th>  
-                    <th>Name</th>
-                    <th>AID</th>
-                    <th>Weight (Kg)</th>
-                    <th>Age</th>
-                    <th>Alert status</th>   
-                    <th>Intake (grams)</th> 
-                    <th>DETAILS</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Date</th>  
-                    <th>Name</th>
-                    <th>AID</th>
-                    <th>Weight (Kg)</th>
-                    <th>Age</th>
-                    <th>Alert status</th>   
-                    <th>Intake (grams)</th>
-                    <th>DETAILS</th>  
-                  </tr>
-                </tfoot>
-                <tbody>
                 <?php 
                   //Fill table
                   $year = date("Y");      
@@ -156,26 +111,15 @@
                        {
                            $animal_age = $year - $row["dateOfbirth"]; 
                           ?>  
-                          <tr>  
-                               <td><?php echo $row["time_stamp"]; ?></td>  
-                               <td><?php echo $row["name"]; ?></td>  
-                               <td><?php echo $row["animal_id"];?></td>  
-                               <td><?php echo $row["actualweight"]; ?></td>   
-                               <td><?php echo $animal_age; ?></td>  
-                               <td><?php echo $row["animal_alertStatus"]; ?></td>  
-                               <td><?php echo $row["dailyIntake"]; ?></td> 
-                               <tD><?php echo "<a href='chart.php'>DETAILS</a>";?></tD>
-                          </tr>  
+                          <!-- Error Alert -->
+                          <div class="alert alert-danger alert-dismissible fade show">
+                                <strong>ALERT: </strong> Animal <?php echo '$row["name"] . "-"';?> <?php echo '$row["animal_id"] . " has not eaten. Aged-"';?><?php echo '$animal_age" Date:"';?> <?php echo '$row["time_stamp"]';?> !
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                          </div>
                           <?php  
                        }  
                   }  
                 ?> 
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card-footer small text-muted">Updated on :  <?php echo date("l jS \of F Y h:i:s A")?></div>
-        </div>
 
       </div>
       <!-- /.container-fluid -->

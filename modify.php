@@ -286,12 +286,24 @@
 
             var contents = $(".form-control").html();
 
-            $('input#animalname').val(contents);
-            $('input#animalweight').val(contents);  
+            $('input#animalname').val(contents); 
             $(this).submit();
           });
         });
-    </script>     
+    </script> 
+    
+   <script type="text/javascript"> 
+        $(document).ready(function() {
+          $(document).on("submit", "form#modify", function(e) {
+            e.preventDefault();
+
+            var contents = $(".form-control").html();
+
+            $('input#animalweight').val(contents); 
+            $(this).submit();
+          });
+        });
+    </script>
 
 </body>
 

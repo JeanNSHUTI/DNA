@@ -42,6 +42,18 @@
       <i class="fas fa-bars"></i>
     </button>
 
+    <!-- Submit -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>      
+
     <!-- Navbar -->
     <ul class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <li class="nav-item dropdown no-arrow">
@@ -109,67 +121,72 @@
              Animal List</div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Date</th>  
-                    <th>Name</th>
-                    <th>Created By</th>  
-                    <th>AID</th>
-                    <th>Weight</th>
-                    <th>Age</th>
-                    <th>Alert status</th>   
-                    <th>Intake (grams)</th> 
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Date</th>  
-                    <th>Name</th>
-                    <th>Created By</th> 
-                    <th>AID</th>
-                    <th>Weight</th>
-                    <th>Age</th>
-                    <th>Alert status</th>   
-                    <th>Intake (grams)</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                <?php 
-                  //Fill table
-                  $year = date("Y");      
-                    
-                  if(mysqli_num_rows($result) > 0)  
-                  {  
-                       while($row = mysqli_fetch_array($result))  
-                       {
-                           $aid = $row['animal_id'];  // save ID for update
-                           $animal_age = $year - $row["dateOfbirth"]; 
-                          ?>  
-                          <tr>  
-                               <td><?php echo $row["time_stamp"]; ?></td>  
-                               <td>
-                                   <div contentEditable= 'true' class='form-control' id='name_<?php echo $aid; ?>'>  
-                                   <?php echo $row["name"]; ?>
-                                   </div>
-                               </td>
-                               <td><?php echo $row["createdBy"];?></td>
-                               <td><?php echo $row["animal_id"]; ?></td>  
-                               <td>
-                                   <div contentEditable= 'true' class='form-control' id='actualweight_<?php echo $aid; ?>'>
-                                   <?php echo $row["actualweight"]; ?>
-                                   </div>                                   
-                               </td>   
-                               <td><?php echo $animal_age; ?></td>  
-                               <td><?php echo $row["animal_alertStatus"]; ?></td>  
-                               <td><?php echo $row["dailyIntake"]; ?></td>  
-                          </tr>  
-                          <?php  
-                       }  
-                  }  
-                ?> 
-                </tbody>
-              </table>
+                <form method="post" action="animalupdate.php">
+                <input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Date</th>  
+                        <th>Name</th>
+                        <th>Created By</th>  
+                        <th>AID</th>
+                        <th>Weight</th>
+                        <th>Age</th>
+                        <th>Alert status</th>   
+                        <th>Intake (grams)</th> 
+                      </tr>
+                    </thead>
+                    <tfoot>
+                      <tr>
+                        <th>Date</th>  
+                        <th>Name</th>
+                        <th>Created By</th> 
+                        <th>AID</th>
+                        <th>Weight</th>
+                        <th>Age</th>
+                        <th>Alert status</th>   
+                        <th>Intake (grams)</th>
+                      </tr>
+                    </tfoot>
+                    <tbody>
+                    <?php 
+                      //Fill table
+                      $year = date("Y");      
+
+                      if(mysqli_num_rows($result) > 0)  
+                      {  
+                           while($row = mysqli_fetch_array($result))  
+                           {
+                               $aid = $row['animal_id'];  // save ID for update
+                               $animal_age = $year - $row["dateOfbirth"]; 
+                              ?>  
+                              <tr>  
+                                   <td><?php echo $row["time_stamp"]; ?></td>  
+                                   <td>
+                                       <div contentEditable= 'true' class='form-control'> </div>
+                                       <?php echo $row["name"]; ?>
+                                       <input type="hidden" id="animalname" name="animalname">
+                                   </td>
+                                   <td><?php echo $row["createdBy"];?></td>
+                                   <td><?php echo $row["animal_id"]; ?></td>  
+                                   <td>
+                                       <div contentEditable= 'true' class='form-control'></div> 
+                                       <?php echo $row["actualweight"]; ?>
+                                       <input type="hidden" id="animalweight" name="animalweight">                                 
+                                   </td>   
+                                   <td><?php echo $animal_age; ?></td>  
+                                   <td><?php echo $row["animal_alertStatus"]; ?></td>  
+                                   <td><?php echo $row["dailyIntake"]; ?></td>  
+                              </tr>  
+                              <?php  
+                           }  
+                      }  
+                    ?> 
+                    </tbody>
+                  </table>                    
+
+                
+                </form>
             </div>
           </div>
           <div class="card-footer small text-muted">Updated on :  <?php echo date("l jS \of F Y h:i:s A")?></div>
@@ -235,7 +252,7 @@
   <script src="js/demo/datatables-demo.js"></script>
     
   <!-- script for hyperlink for table elements -->
-    <script>
+   <!-- <script>
         $(document).ready(function(){
             // Add Class
             $('.form-control').click(function(){
@@ -262,7 +279,7 @@
             
             });
         });
-    </script>
+    </script>  -->
 
 </body>
 

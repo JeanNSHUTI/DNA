@@ -226,10 +226,10 @@
 
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
-  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src='http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js'></script>
     
   <!-- script for hyperlink for table elements -->
-   <script> 
+   <script type="text/javascript"> 
         $(document).ready(function(){
             // Add Class
             $('.form-control').click(function(){

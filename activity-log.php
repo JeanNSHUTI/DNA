@@ -4,6 +4,7 @@
 
    $sql = "SELECT * FROM notification";  
    $result = mysqli_query($link, $sql); 
+   $count = mysqli_num_rows($result);
   
 ?>
 
@@ -108,7 +109,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-list"></i>
                 </div>
-                <div class="mr-5">11 New notifications</div>
+                <div class="mr-5"><?php echo $count ?> 11 New notifications</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="notification.php">
                 <span class="float-left">View Details</span>

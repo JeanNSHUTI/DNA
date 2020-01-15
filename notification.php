@@ -113,7 +113,7 @@
                           ?>  
                           <!-- Error Alert -->
                           <div class="alert alert-danger alert-dismissible fade show">
-                                <strong>ALERT: </strong> Animal <?php echo $row["name"] . "-";?> <?php echo '$row["animal_id"] . " has not eaten. Aged-"';?><?php echo '$animal_age" Date:"';?> <?php echo '$row["time_stamp"]';?> !
+                                <strong>ALERT: </strong> Animal <?php echo $row["name"] . "-";?> <?php echo $row["animal_id"] . '" has not eaten. Aged-"';?><?php echo $animal_age . '". Date:"';?> <?php echo $row["time_stamp"];?> !
                                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                           </div>
                           <?php  

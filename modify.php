@@ -136,7 +136,7 @@
                               ?>  
                               <tr>   
                                    <td>
-                                       <div contentEditable= 'true' class='form-control' id='name_<?php echo $aid; ?>'> 
+                                       <div contentEditable= 'true' class='form-control' id="animalname" name="animalname"> 
                                        <?php echo $row["name"]; ?>
                                        <input type="hidden" id="animalname" name="animalname">   
                                        </div>   

@@ -288,7 +288,7 @@
 
             $('input#animalname').val(contents);
             $('input#animalweight').val(contents);  
-            this.submit();
+            $(this).submit();
           });
         });
     </script>     

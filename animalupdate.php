@@ -3,7 +3,16 @@
    include("config.php");
    //session_start();
 
-   if(isset($_POST['submitAupdate'])){
+    $field = $_POST['field'];
+    $value = $_POST['value'];
+    $editid = $_POST['id'];
+
+    $sql = "UPDATE animal SET ".$field."='".$value."' WHERE animal_id=".$editid;
+    mysqli_query($link,$sql);
+
+    echo 1;
+
+   /*if(isset($_POST['submitAupdate'])){
        $new_name = mysqli_real_escape_string($link,$_POST['animalname']);
        $new_weight = mysqli_real_escape_string($link,$_POST['actualweight']); 
        $aid = mysqli_real_escape_string($link,$_POST['animalID']);
@@ -29,5 +38,5 @@
     }
 
    $link->close();
-?>
+?> */
 

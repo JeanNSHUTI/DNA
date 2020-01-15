@@ -144,7 +144,7 @@
                               ?>  
                               <tr>   
                                    <td>
-                                       <div contentEditable= 'true' class='form-control'> 
+                                       <div contentEditable= 'true' class='form-control' id='name_<?php echo $aid; ?>'> 
                                        <?php echo $row["name"]; ?>
                                        </div>   
                                        <input type="hidden" id="animalname" name="animalname">
@@ -155,10 +155,10 @@
                                        <input type="hidden" id="animalID" name="animalID" value="<?php echo $row["animal_id"]; ?>"> 
                                    </td>  
                                    <td>
-                                       <div contentEditable= 'true' class='form-control'> 
+                                       <div contentEditable= 'true' class='form-control' id='actualweight_<?php echo $aid; ?>'> 
                                        <?php echo $row["actualweight"]; ?>
                                        </div>
-                                       <input type="hidden" id="animalweight" name="animalweight">                                 
+                                       <input type="hidden" id="animalweight" name="animalweight">                               
                                    </td>   
                                    <td><?php echo $animal_age; ?></td>  
                               </tr>  
@@ -236,7 +236,7 @@
   <script src="js/demo/datatables-demo.js"></script>
     
   <!-- script for hyperlink for table elements -->
-   <!-- <script>
+   <script src="js/jquery-3.2.1.min.js">
         $(document).ready(function(){
             // Add Class
             $('.form-control').click(function(){
@@ -263,7 +263,7 @@
             
             });
         });
-    </script>  -->
+    </script>  
 
 </body>
 

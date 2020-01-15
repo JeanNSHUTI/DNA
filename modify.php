@@ -153,7 +153,7 @@
                                        <input type="hidden" id="animalweight" name="animalweight">                               
                                    </td>   
                                    <td><?php echo $animal_age; ?></td>
-                                   <th><?php echo 'href="#" data-toggle="modal" data-target="#deleteModal"';?></th>
+                                   <th><?php echo '<a href="#" data-toggle="modal" data-target="#deleteModal">DELETE</a>';?></th>
                               </tr>  
                               <?php  
                            }  

@@ -106,7 +106,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-list"></i>
                 </div>
-                <div class="mr-5"><?php echo $count ?> New notifications</div>
+                <div class="mr-5"><?php echo $count ?> New notification(s)</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="notification.php">
                 <span class="float-left">View Details</span>

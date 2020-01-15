@@ -110,7 +110,7 @@
                 </div>
                 <div class="mr-5">11 New notifications</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
+              <a class="card-footer text-white clearfix small z-1" href="notification.php">
                 <span class="float-left">View Details</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -190,8 +190,22 @@
                                         }
                                         echo $dob; ?>
                                </td> 
-                               <td><?php echo $row["downtime_startTime"]; ?></td> 
-                               <td><?php echo $row["downtime_endTime"]; ?></td>
+                               <td><?php
+                                        if(is_null($row["downtime_startTime"])){
+                                            $dosT = "-";
+                                        }else{
+                                            $dosT = $row["downtime_startTime"];
+                                        }
+                                        echo $dosT; ?>
+                               </td> 
+                               <td><?php
+                                        if(is_null($row["downtime_endTime"])){
+                                            $doeT = "-";
+                                        }else{
+                                            $doeT = $row["downtime_endTime"];
+                                        }
+                                        echo $doeT; ?>
+                               </td> 
                           </tr>  
                           <?php  
                        }  

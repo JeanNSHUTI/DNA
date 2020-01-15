@@ -94,14 +94,6 @@
 
       <div class="container-fluid">
 
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="dashboard.php">Dashboard</a>
-          </li>
-          <li class="breadcrumb-item active">Modify Animal</li>
-        </ol>
-
         <!-- DataTables Example -->
         <div class="card mb-3">
           <div class="card-header">
@@ -234,9 +226,10 @@
 
   <!-- Demo scripts for this page-->
   <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
     
   <!-- script for hyperlink for table elements -->
-   <script src="js/jquery-3.2.1.min.js">
+   <script> 
         $(document).ready(function(){
             // Add Class
             $('.form-control').click(function(){

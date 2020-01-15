@@ -7,7 +7,7 @@
     $value = $_POST['value'];
     $editid = $_POST['id'];
 
-    $sql = "UPDATE animal SET ".$field."='".$value."' WHERE animal_id=".$editid;
+    $sql = "UPDATE animal SET '$field' = '$value' WHERE animal_id= '$editid'";
     mysqli_query($link,$sql);
 
     echo 1;

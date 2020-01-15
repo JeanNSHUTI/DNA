@@ -41,18 +41,6 @@
       <i class="fas fa-bars"></i>
     </button>
 
-    <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-
     <!-- Navbar -->
     <ul class="navbar-nav ml-auto ml-md-0">
       <li class="nav-item dropdown no-arrow">
@@ -93,7 +81,12 @@
         <a class="nav-link" href="schedule.php">
           <i class="fas fa-fw fa-table"></i>
           <span>Schedule DNA Downtime</span></a>
-      </li>        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="modify.php">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Modify Animal</span></a>
+      </li>          
     </ul>
 
     <div id="content-wrapper">
@@ -118,38 +111,6 @@
           </div>
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
-
-      <!--  <div class="row">
-          <div class="col-lg-8">
-            <div class="card mb-3">
-              <div class="card-header">
-                <i class="fas fa-chart-bar"></i>
-                Bar Chart Example</div>
-              <div class="card-body">
-                <canvas id="myBarChart" width="100%" height="50"></canvas>
-              </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="card mb-3">
-              <div class="card-header">
-                <i class="fas fa-chart-pie"></i>
-                Pie Chart Example</div>
-              <div class="card-body">
-                <canvas id="myPieChart" width="100%" height="100"></canvas>
-              </div>
-              <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-            </div>
-          </div>
-        </div>
-
-        <p class="small text-center text-muted my-5">
-          <em>More chart examples coming soon...</em>
-        </p>
-
-      </div>  -->
-      <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
       <footer class="sticky-footer">

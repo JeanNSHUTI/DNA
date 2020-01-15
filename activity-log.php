@@ -4,7 +4,10 @@
 
    $sql = "SELECT * FROM notification";  
    $result = mysqli_query($link, $sql); 
-   $count = mysqli_num_rows($result);
+
+   $sql1 = "SELECT * FROM animal INNER JOIN animal_feed ON animal.animal_id = animal_feed.animal_id WHERE animal_alertStatus = TRUE";  
+   $result1 = mysqli_query($link, $sql1);
+   $count = mysqli_num_rows($result1);
   
 ?>
 
@@ -109,7 +112,7 @@
                 <div class="card-body-icon">
                   <i class="fas fa-fw fa-list"></i>
                 </div>
-                <div class="mr-5"><?php echo $count ?> 11 New notifications</div>
+                <div class="mr-5"><?php echo $count ?> New notifications</div>
               </div>
               <a class="card-footer text-white clearfix small z-1" href="notification.php">
                 <span class="float-left">View Details</span>

@@ -153,7 +153,7 @@
                                        <input type="hidden" id="animalweight" name="animalweight">                               
                                    </td>   
                                    <td><?php echo $animal_age; ?></td>
-                                   <th><?php echo "<a href='animalupdate.php'>DELETE</a>";?></th>
+                                   <th><?php echo 'href="#" data-toggle="modal" data-target="#deleteModal"';?></th>
                               </tr>  
                               <?php  
                            }  
@@ -210,6 +210,25 @@
       </div>
     </div>
   </div>
+    
+  <!-- Delete Modal-->
+  <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Deleting Animal from Database</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Delete" below if you are sure you want to delete animal from Database.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" id="animalIDD" name="animalIDD" href="animalupdate.php" value="<?php echo $aid?>">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>    
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>

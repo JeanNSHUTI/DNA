@@ -17,12 +17,14 @@
        $new_name = mysqli_real_escape_string($link,$_POST['animalname']);
        $new_weight = mysqli_real_escape_string($link,$_POST['actualweight']); 
        $aid = mysqli_real_escape_string($link,$_POST['animalID']);
+       $aidd = mysqli_real_escape_string($link,$_POST['animalIDD']);
 
    }
 
     echo $new_name;
     echo $new_weight;
     echo $aid;
+    echo $aidd;
 
     $sql1 = "UPDATE animal SET name = '$new_name', actualweight = '$new_weight' WHERE animal_id = '$aid'";
 

@@ -126,7 +126,7 @@
                     <th>Date</th>  
                     <th>Name</th>
                     <th>AID</th>
-                    <th>Weight</th>
+                    <th>Weight (Kg)</th>
                     <th>Age</th>
                     <th>Alert status</th>   
                     <th>Intake (grams)</th> 
@@ -137,7 +137,7 @@
                     <th>Date</th>  
                     <th>Name</th>
                     <th>AID</th>
-                    <th>Weight</th>
+                    <th>Weight (Kg)</th>
                     <th>Age</th>
                     <th>Alert status</th>   
                     <th>Intake (grams)</th>

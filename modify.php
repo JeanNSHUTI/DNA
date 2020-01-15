@@ -40,19 +40,7 @@
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Submit -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="button">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>      
+    </button>   
 
     <!-- Navbar -->
     <ul class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -130,7 +118,7 @@
                         <th>Name</th>
                         <th>Created By</th>  
                         <th>AID</th>
-                        <th>Weight</th>
+                        <th>Weight (Kg)</th>
                         <th>Age</th>
                         <th>Alert status</th>   
                         <th>Intake (grams)</th> 
@@ -142,7 +130,7 @@
                         <th>Name</th>
                         <th>Created By</th> 
                         <th>AID</th>
-                        <th>Weight</th>
+                        <th>Weight (Kg)</th>
                         <th>Age</th>
                         <th>Alert status</th>   
                         <th>Intake (grams)</th>
@@ -163,15 +151,17 @@
                               <tr>  
                                    <td><?php echo $row["time_stamp"]; ?></td>  
                                    <td>
-                                       <div contentEditable= 'true' class='form-control'> </div>
+                                       <div contentEditable= 'true' class='form-control'> 
                                        <?php echo $row["name"]; ?>
+                                       </div>   
                                        <input type="hidden" id="animalname" name="animalname">
                                    </td>
                                    <td><?php echo $row["createdBy"];?></td>
                                    <td><?php echo $row["animal_id"]; ?></td>  
                                    <td>
-                                       <div contentEditable= 'true' class='form-control'></div> 
+                                       <div contentEditable= 'true' class='form-control'> 
                                        <?php echo $row["actualweight"]; ?>
+                                       </div>
                                        <input type="hidden" id="animalweight" name="animalweight">                                 
                                    </td>   
                                    <td><?php echo $animal_age; ?></td>  

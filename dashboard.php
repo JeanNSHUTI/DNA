@@ -161,7 +161,8 @@
                                <td><?php echo $row["actualweight"]; ?></td>   
                                <td><?php echo $animal_age; ?></td>  
                                <td><?php echo $row["animal_alertStatus"]; ?></td>  
-                               <td><?php echo $row["dailyIntake"]; ?></td>  
+                               <td><?php echo $row["dailyIntake"]; ?></td> 
+                               <th><?php echo "<a href='chart.php'>DETAILS</a>";?></th>
                           </tr>  
                           <?php  
                        }  

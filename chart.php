@@ -2,7 +2,7 @@
    include("session.php");
    include("config.php");
 
-   $sql = "SELECT * FROM animal INNER JOIN animal_feed ON animal.animal_id = animal_feed.animal_id";  
+   $sql = "SELECT * FROM animal";  
    $result = mysqli_query($link, $sql); 
   
 ?>
@@ -119,7 +119,7 @@
           <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
         </div>
 
-        <div class="row">
+      <!--  <div class="row">
           <div class="col-lg-8">
             <div class="card mb-3">
               <div class="card-header">
@@ -148,7 +148,7 @@
           <em>More chart examples coming soon...</em>
         </p>
 
-      </div>
+      </div>  -->
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->

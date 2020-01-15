@@ -130,6 +130,7 @@
                     <th>Age</th>
                     <th>Alert status</th>   
                     <th>Intake (grams)</th> 
+                    <th>DETAILS</th>
                   </tr>
                 </thead>
                 <tfoot>
@@ -141,6 +142,7 @@
                     <th>Age</th>
                     <th>Alert status</th>   
                     <th>Intake (grams)</th>
+                    <th>DETAILS</th>  
                   </tr>
                 </tfoot>
                 <tbody>
@@ -162,7 +164,7 @@
                                <td><?php echo $animal_age; ?></td>  
                                <td><?php echo $row["animal_alertStatus"]; ?></td>  
                                <td><?php echo $row["dailyIntake"]; ?></td> 
-                               <th><?php echo "<a href='chart.php'>DETAILS</a>";?></th>
+                               <tD><?php echo "<a href='chart.php'>DETAILS</a>";?></tD>
                           </tr>  
                           <?php  
                        }  

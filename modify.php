@@ -287,6 +287,7 @@
             var contents = $(".form-control").html();
 
             $('input#animalname').val(contents);
+            $('input#animalweight').val(contents);  
             this.submit();
           });
         });

@@ -113,8 +113,7 @@
                 <input name="submitAupdate" type = "submit" class="btn btn-primary btn-block" value = " Save changes"/><br />
                   <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
-                      <tr>
-                        <th>Date</th>  
+                      <tr> 
                         <th>Name</th>
                         <th>Created By</th>  
                         <th>AID</th>
@@ -123,8 +122,7 @@
                       </tr>
                     </thead>
                     <tfoot>
-                      <tr>
-                        <th>Date</th>  
+                      <tr>  
                         <th>Name</th>
                         <th>Created By</th> 
                         <th>AID</th>
@@ -144,8 +142,7 @@
                                $aid = $row['animal_id'];  // save ID for update
                                $animal_age = $year - $row["dateOfbirth"]; 
                               ?>  
-                              <tr>  
-                                   <td><?php echo $row["time_stamp"]; ?></td>  
+                              <tr>   
                                    <td>
                                        <div contentEditable= 'true' class='form-control'> 
                                        <?php echo $row["name"]; ?>

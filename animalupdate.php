@@ -10,10 +10,13 @@
 
    }
 
+    echo $new_name;
+    echo $new_weight;
+    echo $aid;
 
     $sql1 = "UPDATE animal SET name = '$new_name', actualweight = '$new_weight' WHERE animal_id = '$aid'";
 
-    if ($link->query($sql) === TRUE) {
+    if ($link->query($sql1) === TRUE) {
         //echo "New record created successfully";
         echo "<script type='text/javascript'>alert('Animal edited successfully');
         window.location='dashboard.php';

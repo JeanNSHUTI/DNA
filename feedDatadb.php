@@ -37,7 +37,7 @@ $api_key = $animalID = $food_served = $food_left = "";
         }
         
         $sql = "INSERT INTO animal_feed (animal_id, food_served, food_leftover, dailyIntake, animal_alertStatus)
-        VALUES ('345F2121', '1000', '300', '700', FALSE)";
+        VALUES ('$animalID', '1$food_served', '$food_left', '$daily_intake', FALSE)";
         
         if ($link->query($sql) === TRUE) {
             echo "New record created successfully";

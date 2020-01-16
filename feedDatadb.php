@@ -24,6 +24,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $food_served = mysqli_real_escape_string($link,$_POST['foodServed']);
         $food_left = mysqli_real_escape_string($link,$_POST['foodLeft']);
         
+        echo $animalID;
+        echo $food_served;
+        echo $food_left;
+        
         $daily_intake = $food_served - $food_left;
         
         if($daily_intake < 1){

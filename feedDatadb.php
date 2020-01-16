@@ -30,7 +30,7 @@ $api_key = $animalID = $food_served = $food_left = "";
         
         $daily_intake = $food_served - $food_left;
         
-        if($daily_intake < 1){
+        if(intval($daily_intake) < 1){
             $alert_status = TRUE;
         }else{
             $alert_status = FALSE;

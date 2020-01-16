@@ -17,7 +17,7 @@ $api_key_value = "tPmAT5Ab3j7F9";
 
 $api_key = $animalID = $food_served = $food_left = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $api_key = mysqli_real_escape_string($link,$_POST["api_key"]);
     if($api_key == $api_key_value) {
         $animalID = mysqli_real_escape_string($link,$_POST['animalID']);
@@ -65,10 +65,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Wrong API Key provided.";
     }
 
-}
-else {
-    echo "No data posted with HTTP POST.";
-}
+//}
+//else {
+  //  echo "No data posted with HTTP POST.";
+//}
 
 function test_input($data) {
     $data = trim($data);

@@ -18,7 +18,7 @@ $api_key_value = "tPmAT5Ab3j7F9";
 $api_key = $animalID = $food_served = $food_left = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $api_key = test_input($_POST["api_key"]);
+    $api_key = mysqli_real_escape_string($link,$_POST["api_key"]);
     if($api_key == $api_key_value) {
         $animalID = mysqli_real_escape_string($link,$_POST['animalID']);
         $food_served = mysqli_real_escape_string($link,$_POST['foodServed']);

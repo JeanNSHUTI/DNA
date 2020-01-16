@@ -10,19 +10,19 @@
   copies or substantial portions of the Software.
 */
 
-   include("config.php");
+include("config.php");
 
 // Keep this API Key value to be compatible with the ESP32 code provided in the project page. If you change this value, the ESP32 sketch needs to match
 $api_key_value = "tPmAT5Ab3j7F9";
 
-$api_key = $value1 = $value2 = $value3 = "";
+$api_key = $animalID = $food_served = $food_left = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $api_key = test_input($_POST["api_key"]);
     if($api_key == $api_key_value) {
-        $animalID = test_input($_POST["animalID"]);
-        $food_served = test_input($_POST["foodServed"]);
-        $food_left = test_input($_POST["foodLeft"]);
+        $animalID = mysqli_real_escape_string($link,$_POST['animalID']);
+        $food_served = mysqli_real_escape_string($link,$_POST['foodServed']);
+        $food_left = mysqli_real_escape_string($link,$_POST['foodLeft']);
         
         $daily_intake = $food_served - $food_left;
         

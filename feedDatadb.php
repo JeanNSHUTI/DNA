@@ -29,9 +29,12 @@ $api_key = $animalID = $food_served = $food_left = "";
         echo $food_left;
         
         $daily_intake = $food_served - $food_left;
+        $alert_status = FALSE;
         
-        if(intval($daily_intake) < 1){
+        if(intval($daily_intake) <= 0){
             $alert_status = TRUE;
+            //Force daily intake to be 0. Animals can not eat more than what has been served
+            $daily_intake = 0;
         }else{
             $alert_status = FALSE;
         }

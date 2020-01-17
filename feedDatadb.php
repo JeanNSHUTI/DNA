@@ -42,21 +42,10 @@ $api_key = $animalID = $food_served = $food_left = "";
         $sql = "INSERT INTO animal_feed (animal_id, food_served, food_leftover, dailyIntake, animal_alertStatus)
         VALUES ('$animalID', '$food_served', '$food_left', '$daily_intake', FALSE)";
         
+        //$sql = "INSERT INTO animal_feed (animal_id, food_served, food_leftover, dailyIntake, animal_alertStatus) VALUES ('$animalID', '$food_served', '$food_left', '$daily_intake', '$alert_status')";
+        
         if ($link->query($sql) === TRUE) {
             echo "New record created successfully";
-            
-            if($alert_status === 1){
-                //Send notification to 
-                $_type = "ANIMAL WARNING";
-                
-                $sql1 = "INSERT INTO notification (username, type, downtime_startTime, downtime_endTime) VALUES ('$username', '$_type', '$new_startdown', '$new_enddown')";
-                
-                if ($link->query($sql1) === TRUE) {
-                    echo "New record created successfully";
-                } else {
-                    echo "Error: " . $sql1 . "<br>" . $link->error;            
-                }                
-            }
         } 
         else {
             echo "Error: " . $sql . "<br>" . $link->error;
@@ -73,9 +62,9 @@ $api_key = $animalID = $food_served = $food_left = "";
   //  echo "No data posted with HTTP POST.";
 //}
 
-function test_input($data) {
+/*function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
-}
+}*/

@@ -2,7 +2,7 @@
 
     include("config.php");
 
-    $api_key_value = "tPmAT5Ab3j7F9";
+    $api_key_value = "tPmATdAb3j8F9";
 
     $apikey    =   $_GET['api_key'];
     //$apikey  = mysqli_real_escape_string($link,$_GET['api_key']);

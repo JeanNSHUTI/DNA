@@ -39,10 +39,10 @@ $api_key = $animalID = $food_served = $food_left = "";
             $alert_status = FALSE;
         }
         
-        $sql = "INSERT INTO animal_feed (animal_id, food_served, food_leftover, dailyIntake, animal_alertStatus)
-        VALUES ('$animalID', '$food_served', '$food_left', '$daily_intake', FALSE)";
+        //$sql = "INSERT INTO animal_feed (animal_id, food_served, food_leftover, dailyIntake, animal_alertStatus)
+        //VALUES ('$animalID', '$food_served', '$food_left', '$daily_intake', FALSE)";
         
-        //$sql = "INSERT INTO animal_feed (animal_id, food_served, food_leftover, dailyIntake, animal_alertStatus) VALUES ('$animalID', '$food_served', '$food_left', '$daily_intake', '$alert_status')";
+        $sql = "INSERT INTO animal_feed (animal_id, food_served, food_leftover, dailyIntake, animal_alertStatus) VALUES ('$animalID', '$food_served', '$food_left', '$daily_intake', '$alert_status')";
         
         if ($link->query($sql) === TRUE) {
             echo "New record created successfully";
